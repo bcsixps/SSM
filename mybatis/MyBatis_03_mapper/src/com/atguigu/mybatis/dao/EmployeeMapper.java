@@ -22,6 +22,9 @@ public interface EmployeeMapper {
 	
 	public Employee getEmpByMap(Map<String, Object> map);
 	
+	/**
+	*@Param 是为了给修饰的变量起一个别名  然后在mapper.xml中就可以使用#{id} 来取值了
+	**/
 	public Employee getEmpByIdAndLastName(@Param("id")Integer id,@Param("lastName")String lastName);
 	
 	public Employee getEmpById(Integer id);
